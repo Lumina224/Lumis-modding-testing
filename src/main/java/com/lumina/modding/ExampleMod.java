@@ -1,5 +1,6 @@
 package com.lumina.modding;
 
+import com.lumina.modding.block.ModBlocks;
 import com.lumina.modding.item.ModItems;
 import net.neoforged.bus.api.Event;
 import org.slf4j.Logger;
@@ -48,6 +49,8 @@ public class ExampleMod {
         ModItems.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ModBlocks.register(modEventBus);
     }
 
 

@@ -12,9 +12,6 @@ public class ModItems {
     public static final DeferredItem<Item> LUMINENCE = ITEMS.register("luminence",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> LUMIS_TOY = ITEMS.register("lumis_toy",
-            () -> new Item(new Item.Properties()));
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
