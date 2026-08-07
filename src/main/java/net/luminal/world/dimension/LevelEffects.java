@@ -6,11 +6,13 @@ import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
 
+import static java.lang.Float.NaN;
+
 public class LevelEffects extends DimensionSpecialEffects{
 
     public LevelEffects() {
         super(
-                -1,
+                NaN,
                 false,
                 DimensionSpecialEffects.SkyType.END,
                 false,
