@@ -1,24 +1,13 @@
-package com.lumina.modding;
+package net.luminal;
 
-import com.lumina.modding.block.ModBlocks;
-import com.lumina.modding.item.ModItems;
-import net.neoforged.bus.api.Event;
+import net.luminal.block.ModBlocks;
+import net.luminal.item.ModItems;
+import net.luminal.worldgen.LuminalModChunkGenerators;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -28,19 +17,15 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
-@Mod(ExampleMod.MOD_ID)
-public class ExampleMod {
+@Mod(Luminal.MOD_ID)
+public class Luminal {
 
-    public static final String MOD_ID = "luminamodding";
+    public static final String MOD_ID = "luminal";
 
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public ExampleMod(IEventBus modEventBus, ModContainer modContainer) {
+    public Luminal(IEventBus modEventBus, ModContainer modContainer) {
 
         modEventBus.addListener(this::commonSetup);
 
@@ -51,6 +36,7 @@ public class ExampleMod {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         ModBlocks.register(modEventBus);
+        LuminalModChunkGenerators.REGISTRY.register(modEventBus);
     }
 
 

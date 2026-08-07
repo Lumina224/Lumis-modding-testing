@@ -1,8 +1,8 @@
-package com.lumina.modding.datagen;
+package net.luminal.datagen;
 
-import com.lumina.modding.ExampleMod;
-import com.lumina.modding.item.ModItems;
-import com.lumina.modding.util.ModTags;
+import net.luminal.Luminal;
+import net.luminal.item.ModItems;
+import net.luminal.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModItemTagProvider extends ItemTagsProvider {
 
     public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, blockTags, ExampleMod.MOD_ID, existingFileHelper);
+        super(output, lookupProvider, blockTags, Luminal.MOD_ID, existingFileHelper);
     }
 
     @Override

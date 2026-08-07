@@ -1,6 +1,6 @@
-package com.lumina.modding.datagen;
+package net.luminal.datagen;
 
-import com.lumina.modding.block.ModBlocks;
+import net.luminal.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;

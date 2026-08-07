@@ -1,4 +1,4 @@
-package com.lumina.modding;
+package net.luminal;
 
 import java.util.List;
 

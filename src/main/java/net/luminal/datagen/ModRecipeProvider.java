@@ -1,4 +1,4 @@
-package com.lumina.modding.datagen;
+package net.luminal.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

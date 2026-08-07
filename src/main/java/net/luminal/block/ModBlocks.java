@@ -1,15 +1,13 @@
-package com.lumina.modding.block;
+package net.luminal.block;
 
-import com.lumina.modding.ExampleMod;
-import com.lumina.modding.item.ModItems;
-import net.minecraft.core.registries.Registries;
+import net.luminal.Luminal;
+import net.luminal.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 
@@ -18,7 +16,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
-            DeferredRegister.createBlocks(ExampleMod.MOD_ID);
+            DeferredRegister.createBlocks(Luminal.MOD_ID);
 
     public static final DeferredBlock<Block> LUMINENCE_BLOCK = registerBlock("luminence_block",
             () -> new Block(BlockBehaviour.Properties.of()

@@ -1,7 +1,7 @@
-package com.lumina.modding.datagen;
+package net.luminal.datagen;
 
-import com.lumina.modding.ExampleMod;
-import com.lumina.modding.block.ModBlocks;
+import net.luminal.Luminal;
+import net.luminal.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, ExampleMod.MOD_ID, exFileHelper);
+        super(output, Luminal.MOD_ID, exFileHelper);
     }
 
     @Override
