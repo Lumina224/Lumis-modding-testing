@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.luminal.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "TitleScreenMixin",
+    "BrandingControlMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

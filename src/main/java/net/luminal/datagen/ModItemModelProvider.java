@@ -15,4 +15,5 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.LUMINENCE.get());
     }
+
 }
