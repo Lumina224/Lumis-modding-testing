@@ -31,7 +31,7 @@ public abstract class TitleScreenMixin extends Screen {
                 String text = widget.getMessage().getString().toLowerCase();
 
                 if (text.contains("options") || text.contains("quit")) {
-                    widget.setY(widget.getY() - 48); // Fix this later Chaaze - Basically the options and the quit button are not as close to multiplayer as multiplayer is to singleplayer. I want the gaps to be the same :3
+                    widget.setY(widget.getY() - 58);
                 }
             }
         }
