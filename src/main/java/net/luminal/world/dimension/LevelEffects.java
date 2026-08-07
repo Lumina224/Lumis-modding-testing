@@ -1,19 +1,23 @@
 package net.luminal.world.dimension;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.world.phys.Vec3;
+import org.joml.Matrix4f;
 
 public class LevelEffects extends DimensionSpecialEffects{
 
     public LevelEffects() {
         super(
-                Float.NaN,
+                -1,
                 false,
-                DimensionSpecialEffects.SkyType.NONE,
+                DimensionSpecialEffects.SkyType.END,
                 false,
-                false
+                true
         );
     }
+
 
     @Override
     public Vec3 getBrightnessDependentFogColor(Vec3 color, float brightness) {
@@ -22,6 +26,6 @@ public class LevelEffects extends DimensionSpecialEffects{
 
     @Override
     public boolean isFoggyAt(int x, int z) {
-        return false;
+        return true;
     }
 }
